@@ -51,7 +51,7 @@ particlesJS('particles-js',
         }
       },
       "size": {
-        "value": 5,
+        "value": 3,
         "random": true,
         "anim": {
           "enable": false,
@@ -64,7 +64,7 @@ particlesJS('particles-js',
         "enable": true,
         "distance": 150,
         "color": "#000000",
-        "opacity": 0.4,
+        "opacity": 0.2,
         "width": 1
       },
       "move": {
@@ -85,8 +85,8 @@ particlesJS('particles-js',
       "detect_on": "canvas",
       "events": {
         "onhover": {
-          "enable": true,
-          "mode": "grab"
+          "enable": false,
+          "mode": "repulse"
         },
         "onclick": {
           "enable": true,
