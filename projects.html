@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Aziz Rochdi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        .projects-section {
+            margin-top: 32px;
+        }
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+        .project-card {
+            background: #f7f9fa;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+            padding: 32px 28px 24px 28px;
+            min-width: 260px;
+            max-width: 340px;
+            flex: 1 1 300px;
+            text-align: center;
+            transition: box-shadow 0.2s, transform 0.2s;
+            position: relative;
+        }
+        .project-card:hover {
+            box-shadow: 0 8px 32px rgba(25, 118, 210, 0.18);
+            transform: translateY(-4px) scale(1.03);
+        }
+        .project-icon {
+            width: 54px;
+            height: 54px;
+            margin-bottom: 18px;
+        }
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        .project-desc {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 0;
+        }
+        @media (max-width: 700px) {
+            .project-grid {
+                flex-direction: column;
+                gap: 18px;
+            }
+            .project-card {
+                min-width: 0;
+                padding: 18px 10px 14px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AZIZ ROCHDI</div>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <h1>Projects</h1>
+        </section>
+    </header>
+    <main>
+        <section class="projects-section">
+            <h2>Sample Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img class="project-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Inventory Management System">
+                    <div class="project-title">Inventory Management System</div>
+                    <p class="project-desc">Designed and implemented a scalable inventory management system using Java and Spring Boot, supporting real-time stock updates and reporting.</p>
+                </div>
+                <div class="project-card">
+                    <img class="project-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Online Banking API">
+                    <div class="project-title">Online Banking API</div>
+                    <p class="project-desc">Developed secure RESTful APIs for an online banking platform, enabling seamless transactions and account management.</p>
+                </div>
+                <div class="project-card">
+                    <img class="project-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Task Automation Tool">
+                    <div class="project-title">Task Automation Tool</div>
+                    <p class="project-desc">Created a Java-based automation tool to streamline repetitive business processes, improving efficiency and accuracy.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Aziz Rochdi. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

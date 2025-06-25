@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Aziz Rochdi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        .contact-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh;
+        }
+        .contact-card {
+            background: #f7f9fa;
+            border-radius: 18px;
+            box-shadow: 0 2px 16px rgba(25, 118, 210, 0.10);
+            padding: 40px 36px 32px 36px;
+            min-width: 320px;
+            max-width: 400px;
+            text-align: center;
+        }
+        .contact-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1976d2;
+            margin-bottom: 24px;
+        }
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 22px;
+            font-size: 1.08rem;
+            color: #333;
+            justify-content: flex-start;
+        }
+        .contact-icon {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+        }
+        .contact-link {
+            color: #1976d2;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 700px) {
+            .contact-card {
+                min-width: 0;
+                padding: 18px 8px 14px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AZIZ ROCHDI</div>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <h1>Contact</h1>
+        </section>
+    </header>
+    <main>
+        <section class="contact-section">
+            <div class="contact-card">
+                <div class="contact-title">Get in Touch</div>
+                <ul class="contact-list">
+                    <li class="contact-item">
+                        <img class="contact-icon" src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+                        <a class="contact-link" href="mailto:aziz20rochdi@gmail.com">aziz20rochdi@gmail.com</a>
+                    </li>
+                    <li class="contact-item">
+                        <img class="contact-icon" src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone">
+                        <a class="contact-link" href="tel:+212613534451">+212 613 534 451</a>
+                    </li>
+                    <li class="contact-item">
+                        <img class="contact-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                        <a class="contact-link" href="https://github.com/aziz-rochdi" target="_blank">github.com/aziz-rochdi</a>
+                    </li>
+                    <li class="contact-item">
+                        <img class="contact-icon" src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location">
+                        <span>Settat, Morocco</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Aziz Rochdi. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

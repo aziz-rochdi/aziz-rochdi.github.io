@@ -1,0 +1,127 @@
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        .skills-section {
+            margin-bottom: 48px;
+        }
+        .skills-section h2 {
+            color: #1976d2;
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin-top: 12px;
+        }
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f7f9fa;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+            padding: 18px 16px 10px 16px;
+            min-width: 110px;
+            max-width: 120px;
+            flex: 1 1 110px;
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .tech-item:hover {
+            box-shadow: 0 8px 24px rgba(25, 118, 210, 0.16);
+            transform: translateY(-4px) scale(1.04);
+        }
+        .tech-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        .tech-label {
+            font-size: 1rem;
+            color: #1976d2;
+            font-weight: 500;
+            text-align: center;
+        }
+        @media (max-width: 700px) {
+            .tech-grid {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .tech-item {
+                min-width: 0;
+                max-width: 100%;
+                padding: 12px 8px 8px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AZIZ ROCHDI</div>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <h1>Skills</h1>
+        </section>
+    </header>
+    <main>
+        <section class="skills-section">
+            <h2>Back-end</h2>
+            <div class="tech-grid">
+                <div class="tech-item"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"><span class="tech-label">Java</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot"><span class="tech-label">Spring Boot</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachemaven/apachemaven-original.svg" alt="Maven"><span class="tech-label">Maven</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><span class="tech-label">MySQL</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"><span class="tech-label">PostgreSQL</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://www.vectorlogo.zone/logos/keycloak/keycloak-icon.svg" alt="Keycloak"><span class="tech-label">Keycloak</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg" alt="RabbitMQ"><span class="tech-label">RabbitMQ</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" alt="Kafka"><span class="tech-label">Kafka</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://seeklogo.com/images/L/liquibase-logo-CE6A0E6DC7-seeklogo.com.png" alt="Liquibase"><span class="tech-label">Liquibase</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jpa/jpa-original.svg" alt="JPA"><span class="tech-label">JPA</span></div>
+            </div>
+        </section>
+        <section class="skills-section">
+            <h2>Front-end</h2>
+            <div class="tech-grid">
+                <div class="tech-item"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span class="tech-label">JavaScript</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular"><span class="tech-label">Angular</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="VueJs"><span class="tech-label">VueJs</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://rxjs.dev/assets/images/favicons/android-chrome-192x192.png" alt="RxJS"><span class="tech-label">RxJS</span></div>
+            </div>
+        </section>
+        <section class="skills-section">
+            <h2>DevOps & Tools</h2>
+            <div class="tech-grid">
+                <div class="tech-item"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"><span class="tech-label">Docker</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins"><span class="tech-label">Jenkins</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"><span class="tech-label">Linux</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span class="tech-label">Git</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/junit/junit-original.svg" alt="JUnit"><span class="tech-label">JUnit</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://www.svgrepo.com/show/354202/sonarqube.svg" alt="SonarQube"><span class="tech-label">SonarQube</span></div>
+            </div>
+        </section>
+        <section class="skills-section">
+            <h2>Languages</h2>
+            <div class="tech-grid">
+                <div class="tech-item"><img class="tech-icon" src="https://cdn-icons-png.flaticon.com/512/197/197374.png" alt="English"><span class="tech-label">English: Intermediate</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://cdn-icons-png.flaticon.com/512/197/197551.png" alt="Arabic"><span class="tech-label">Arabic: Native</span></div>
+                <div class="tech-item"><img class="tech-icon" src="https://cdn-icons-png.flaticon.com/512/197/197560.png" alt="French"><span class="tech-label">French: Fluent</span></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Aziz Rochdi. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

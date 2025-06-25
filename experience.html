@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Aziz Rochdi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        .timeline {
+            position: relative;
+            margin: 40px 0 0 0;
+            padding-left: 30px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #1976d2 0%, #43a047 100%);
+            border-radius: 2px;
+        }
+        .exp-card {
+            position: relative;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+            margin-bottom: 36px;
+            padding: 28px 32px 20px 32px;
+            transition: box-shadow 0.2s, transform 0.2s;
+            border-left: 6px solid #1976d2;
+        }
+        .exp-card:hover {
+            box-shadow: 0 8px 32px rgba(25, 118, 210, 0.18);
+            transform: translateY(-4px) scale(1.01);
+        }
+        .exp-dot {
+            position: absolute;
+            left: -24px;
+            top: 32px;
+            width: 18px;
+            height: 18px;
+            background: #1976d2;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
+        }
+        .exp-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 8px;
+        }
+        .exp-company {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #1976d2;
+        }
+        .exp-role {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #388e3c;
+        }
+        .exp-date {
+            margin-left: auto;
+            font-size: 0.98rem;
+            color: #888;
+            font-weight: 400;
+        }
+        .exp-card ul {
+            margin: 12px 0 0 0;
+            padding-left: 20px;
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        @media (max-width: 700px) {
+            .exp-card {
+                padding: 18px 10px 14px 18px;
+            }
+            .timeline {
+                padding-left: 18px;
+            }
+            .exp-dot {
+                left: -16px;
+                top: 24px;
+                width: 12px;
+                height: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AZIZ ROCHDI</div>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <h1>Experience</h1>
+        </section>
+    </header>
+    <main>
+        <section class="experience">
+            <h2>Work Experience</h2>
+            <div class="timeline">
+                <div class="exp-card">
+                    <div class="exp-dot"></div>
+                    <div class="exp-header">
+                        <span class="exp-company">Leyton Morocco</span>
+                        <span class="exp-role">Intermediate Software Engineer</span>
+                        <span class="exp-date">2023 - Present</span>
+                    </div>
+                    <ul>
+                        <li>Reduced latency of the application pages by up to 70% through optimization of JPA queries and utilization of more efficient Java code.</li>
+                        <li>Designed, modeled project specifications, and refactored existing code adhering to best practices and clean code principles.</li>
+                        <li>Supervised and assisted new interns joining the team.</li>
+                    </ul>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-dot"></div>
+                    <div class="exp-header">
+                        <span class="exp-company">Leyton Morocco</span>
+                        <span class="exp-role">Associate Software Engineer</span>
+                        <span class="exp-date">2022 - 2023</span>
+                    </div>
+                    <ul>
+                        <li>Participated in developing a large-scale web application utilized by Leyton consultants to manage the entire CEE workflow.</li>
+                        <li>Redesigned the application using Angular 16 and implemented a new UX/UI design.</li>
+                        <li>Addressed broken functionalities, wrote JUnit tests, and ensured a minimum of 80% code coverage.</li>
+                        <li>Refactored codebase and addressed issues identified in SonarQube reports.</li>
+                        <li>Collaborated with the functional team to ensure that the project meets the requirements.</li>
+                    </ul>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-dot"></div>
+                    <div class="exp-header">
+                        <span class="exp-company">Leyton Morocco</span>
+                        <span class="exp-role">Java Developer Intern</span>
+                        <span class="exp-date">Mar 2022 - Aug 2022</span>
+                    </div>
+                    <ul>
+                        <li>Participated in developing a web application used by Leyton clients to manage their CEEs in the energy field.</li>
+                        <li>Engaged in Agile development practices firsthand and participated in various Scrum ceremonies.</li>
+                        <li>Wrote JUnit tests to guarantee code coverage.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Aziz Rochdi. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
