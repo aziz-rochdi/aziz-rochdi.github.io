@@ -1143,6 +1143,11 @@ img {
   border: 1px solid transparent;
 }
 
+.stack-icon img {
+  display: block;
+  object-fit: contain;
+}
+
 .stack-icon--java {
   background: rgba(248, 75, 0, 0.12);
   color: #f84b00;
