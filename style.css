@@ -382,6 +382,7 @@ img {
   justify-content: center;
   cursor: pointer;
   color: var(--clr-text-dim);
+  pointer-events: auto;
   transition: background var(--transition), color var(--transition), transform var(--transition);
 }
 
@@ -396,7 +397,7 @@ img {
 .mobile-nav ul {
   display: flex;
   flex-direction: column;
-  padding: 28px 20px;
+  padding: 72px 20px 28px;
   gap: 6px;
   flex: 1;
 }

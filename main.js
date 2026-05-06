@@ -71,11 +71,7 @@
     document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
-  // Close button inside drawer
-  const mobileNavClose = document.getElementById('mobileNavClose');
-  if (mobileNavClose) mobileNavClose.addEventListener('click', closeMobile);
-
-  // Click on the dimmed backdrop (left of drawer) to close
+  // Click on the dimmed backdrop (area outside drawer) to close
   mobileNav.addEventListener('click', (e) => {
     if (e.target === mobileNav) closeMobile();
   });
