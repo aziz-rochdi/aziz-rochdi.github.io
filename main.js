@@ -222,4 +222,103 @@
     copy.textContent = `© ${new Date().getFullYear()} · Built with care. No frameworks harmed.`;
   }
 
+  /* ─── Hero Typewriter (looping) ─── */
+  const typewriterLines = [
+    { id: 'typed-line-1', text: 'Results-Driven',          typeSpeed: 60, eraseSpeed: 35, delayAfter: 150 },
+    { id: 'typed-line-2', text: 'Fullstack Development.',   typeSpeed: 55, eraseSpeed: 30, delayAfter: 150 },
+    { id: 'typed-line-3', text: 'From Idea to Production.', typeSpeed: 50, eraseSpeed: 28, delayAfter: 0   },
+  ];
+
+  // Inject blinking cursor style
+  const cursorStyle = document.createElement('style');
+  cursorStyle.textContent = `
+    .typed-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 0.85em;
+      background: currentColor;
+      margin-left: 3px;
+      vertical-align: middle;
+      border-radius: 1px;
+      animation: blink-cursor 0.75s step-end infinite;
+    }
+    @keyframes blink-cursor {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+  `;
+  document.head.appendChild(cursorStyle);
+
+  const cursor = document.createElement('span');
+  cursor.className = 'typed-cursor';
+  cursor.setAttribute('aria-hidden', 'true');
+
+  // Clear all typed text nodes (leave cursor in place)
+  function clearLine(el) {
+    Array.from(el.childNodes).forEach(node => {
+      if (node !== cursor) node.remove();
+    });
+  }
+
+  function typeLine(cfg, onDone) {
+    const el = document.getElementById(cfg.id);
+    if (!el) { onDone(); return; }
+    el.appendChild(cursor);
+    let i = 0;
+    const chars = cfg.text.split('');
+    (function typeNext() {
+      if (i < chars.length) {
+        el.insertBefore(document.createTextNode(chars[i++]), cursor);
+        setTimeout(typeNext, cfg.typeSpeed + Math.random() * 18);
+      } else {
+        setTimeout(onDone, cfg.delayAfter);
+      }
+    })();
+  }
+
+  function eraseLine(cfg, onDone) {
+    const el = document.getElementById(cfg.id);
+    if (!el) { onDone(); return; }
+    el.appendChild(cursor);
+    (function eraseNext() {
+      // Find the last text node before cursor
+      const nodes = Array.from(el.childNodes).filter(n => n !== cursor);
+      if (nodes.length === 0) { onDone(); return; }
+      const last = nodes[nodes.length - 1];
+      if (last.nodeType === Node.TEXT_NODE && last.nodeValue.length > 1) {
+        last.nodeValue = last.nodeValue.slice(0, -1);
+      } else {
+        last.remove();
+      }
+      setTimeout(eraseNext, cfg.eraseSpeed + Math.random() * 10);
+    })();
+  }
+
+  function runTypePhase(index, onAllTyped) {
+    if (index >= typewriterLines.length) { onAllTyped(); return; }
+    typeLine(typewriterLines[index], () => runTypePhase(index + 1, onAllTyped));
+  }
+
+  function runErasePhase(index, onAllErased) {
+    if (index < 0) { onAllErased(); return; }
+    eraseLine(typewriterLines[index], () => runErasePhase(index - 1, onAllErased));
+  }
+
+  function loopTypewriter() {
+    // 1. Type all lines sequentially
+    runTypePhase(0, () => {
+      // 2. Pause so reader can enjoy the full text
+      setTimeout(() => {
+        // 3. Erase all lines in reverse
+        runErasePhase(typewriterLines.length - 1, () => {
+          // 4. Short breath, then restart
+          setTimeout(loopTypewriter, 500);
+        });
+      }, 1800);
+    });
+  }
+
+  // Kick off after page settles
+  setTimeout(loopTypewriter, 400);
+
 })();

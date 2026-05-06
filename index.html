@@ -86,9 +86,9 @@
             </div>
 
             <h1 class="hero-title">
-                Results-Driven<br />
-                <span class="gradient-text">Fullstack Development.</span><br />
-                <span class="hero-sub-title">From Idea to Production.</span>
+                <span id="typed-line-1" class="typed-line"></span><br />
+                <span class="gradient-text"><span id="typed-line-2" class="typed-line"></span></span><br />
+                <span class="hero-sub-title"><span id="typed-line-3" class="typed-line"></span></span>
             </h1>
 
             <p class="hero-description">
@@ -183,68 +183,119 @@
 
             <div class="expertise-grid">
 
+                <!-- Card 1: DevOps & Deployment -->
                 <div class="expertise-card" data-index="0">
                     <div class="expertise-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7" />
-                            <path d="M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4" />
-                            <path d="M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="8" rx="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2"/>
+                            <line x1="6" y1="6" x2="6.01" y2="6"/>
+                            <line x1="6" y1="18" x2="6.01" y2="18"/>
+                            <path d="M13 6h5M13 18h5"/>
                         </svg>
                     </div>
-                    <h3>Cloud &amp; Storage</h3>
-                    <p>Enterprise-scale data management using MinIO (S3-compatible object storage). Led the automated
-                        migration of <strong>467,000 documents</strong> with zero data loss, enforced by MySQL integrity
-                        scripts.</p>
+                    <h3>DevOps &amp; Deployment</h3>
+                    <p>I don't just write code — I ship it. From containerizing applications with <strong>Docker</strong>
+                        and building fully automated <strong>CI/CD pipelines with Jenkins</strong>, to managing
+                        enterprise-scale storage with <strong>MinIO / S3</strong> and executing zero-loss data
+                        migrations of <strong>467,000+ documents</strong>, I own the full delivery lifecycle. Your
+                        product reaches production reliably, and your data stays safe.</p>
                     <div class="expertise-tags">
-                        <span>MinIO</span><span>S3</span><span>MySQL</span><span>Data Migration</span>
+                        <span>Docker</span><span>Jenkins</span><span>CI/CD</span><span>Oracle Cloud</span><span>MinIO</span><span>S3</span>
                     </div>
                 </div>
 
+                <!-- Card 2: Backend Development -->
                 <div class="expertise-card" data-index="1">
                     <div class="expertise-icon expertise-icon--highlight">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <h3>Backend Development</h3>
+                    <p>Rock-solid backend systems are the engine of every great product. I build high-performance,
+                        production-grade APIs and services using <strong>Java &amp; Spring Boot</strong>, backed by
+                        <strong>Hibernate / JPA</strong> for efficient data persistence. Every line of backend code I
+                        write is designed for scalability, maintainability, and real-world production loads — not just
+                        to pass a demo.</p>
+                    <div class="expertise-tags">
+                        <span>Java 17 / 21</span><span>Spring Boot</span><span>Hibernate</span><span>JPA</span><span>REST APIs</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Microservices Architecture -->
+                <div class="expertise-card" data-index="2">
+                    <div class="expertise-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="5" r="2"/>
+                            <circle cx="5" cy="19" r="2"/>
+                            <circle cx="19" cy="19" r="2"/>
+                            <path d="M12 7v4M12 11l-5.5 6M12 11l5.5 6"/>
+                            <line x1="7" y1="19" x2="17" y2="19"/>
+                        </svg>
+                    </div>
+                    <h3>Microservices Architecture</h3>
+                    <p>I architect distributed systems that scale independently and fail gracefully. Using
+                        <strong>Spring Cloud</strong> and <strong>Eureka</strong> for service discovery, I wire
+                        resilient ecosystems powered by <strong>Kafka</strong> and <strong>RabbitMQ</strong> for
+                        decoupled, event-driven communication. Distributed tracing with <strong>Zipkin</strong> and
+                        full observability via <strong>Prometheus &amp; Grafana</strong> ensure you always know exactly
+                        what your system is doing in production.</p>
+                    <div class="expertise-tags">
+                        <span>Spring Cloud</span><span>Eureka</span><span>Kafka</span><span>RabbitMQ</span><span>Zipkin</span><span>Prometheus</span><span>Grafana</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: Secure Applications -->
+                <div class="expertise-card" data-index="3">
+                    <div class="expertise-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3>Secure Applications</h3>
+                    <p>Security is not optional — it's a requirement. I implement enterprise-grade authentication and
+                        authorization using <strong>Spring Security</strong>, <strong>OAuth 2.0</strong>, and
+                        <strong>OIDC</strong> standards, with <strong>Keycloak</strong> as the identity provider and
+                        <strong>JWT</strong> for stateless token management. Your users' data and your business logic
+                        are protected by industry-standard security protocols from the ground up.</p>
+                    <div class="expertise-tags">
+                        <span>Spring Security</span><span>OAuth2</span><span>OIDC</span><span>Keycloak</span><span>JWT</span>
+                    </div>
+                </div>
+
+                <!-- Card 5: Performance Engineering -->
+                <div class="expertise-card" data-index="4">
+                    <div class="expertise-icon expertise-icon--highlight">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                         </svg>
                     </div>
                     <h3>Performance Engineering</h3>
-                    <p>Diagnosed and eliminated N+1 queries, optimized JPA mappings and fetch strategies, and introduced
-                        strategic caching — cutting application latency by <strong>70%</strong> in production.</p>
+                    <p>Slow APIs kill businesses. I go deep into the JVM to diagnose and eliminate hidden performance
+                        killers — N+1 queries, inefficient JPA mappings, missing indexes. By introducing strategic
+                        caching and optimized fetch strategies, I achieved a <strong>70% reduction in API
+                        latency</strong> in production. I don't just fix symptoms — I eliminate root causes.</p>
                     <div class="expertise-tags">
                         <span>JPA / Hibernate</span><span>Query Tuning</span><span>Caching</span>
                     </div>
                 </div>
 
-                <div class="expertise-card" data-index="2">
+                <!-- Card 6: Frontend Excellence -->
+                <div class="expertise-card" data-index="5">
                     <div class="expertise-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <circle cx="12" cy="12" r="3" />
-                            <path
-                                d="M6.343 6.343L4.929 4.929M17.657 6.343l1.414-1.414M6.343 17.657l-1.414 1.414M17.657 17.657l1.414 1.414M2 12h2M20 12h2M12 2v2M12 20v2" />
-                        </svg>
-                    </div>
-                    <h3>Architecture &amp; Messaging</h3>
-                    <p>Designed and delivered production microservices leveraging event-driven patterns. Deep hands-on
-                        experience with <strong>Apache Kafka</strong> and <strong>RabbitMQ</strong> for decoupled,
-                        resilient systems.</p>
-                    <div class="expertise-tags">
-                        <span>Microservices</span><span>Kafka</span><span>RabbitMQ</span><span>Spring Boot</span>
-                    </div>
-                </div>
-
-                <div class="expertise-card" data-index="3">
-                    <div class="expertise-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <rect x="2" y="3" width="20" height="14" rx="2" />
                             <path d="M8 21h8M12 17v4" />
                         </svg>
                     </div>
                     <h3>Frontend Excellence</h3>
-                    <p>Built and redesigned production Angular applications using Angular 16, RxJS, and component-driven
-                        architecture — delivering polished, accessible UX improvements across enterprise products.</p>
+                    <p>A powerful backend deserves an equally polished interface. I build reactive, component-driven
+                        frontends in <strong>Angular 16</strong> with <strong>RxJS</strong> and TypeScript — delivering
+                        fast, accessible, enterprise-grade UX that users actually enjoy. From complex data tables to
+                        real-time dashboards, I turn requirements into seamless experiences.</p>
                     <div class="expertise-tags">
                         <span>Angular 16</span><span>RxJS</span><span>TypeScript</span><span>UI/UX</span>
                     </div>
